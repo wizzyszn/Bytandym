@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    background-color: #136D58;
+    box-sizing: border-box;
+    margin : 0
+}
+.header-bg{
+    background-image: url('../src/Assets/div.hero-new-button.png'), url('../src//Assets/654542bb3d7281a3799aa4af_phone-bg.webp.png');
+    background-repeat: no-repeat;
+    background-position: 85% 43%, 90% 0% ;
+}
+
+.png::before{
+content: url('./Assets/png/Item\ →\ 6543b68f454a37fe257ad0f1_check-evergreen.svg.png');
+display: inline-block;
+position: absolute;
+left: 65px;
+}
+
+.experience-bg1{
+    background-image: url('./Assets/ExperienceBg/second.png');
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+}
+
+.experience-bg2{
+    background-image: url('./Assets/ExperienceBg/last.png');
+    background-repeat: no-repeat;
+    background-position: 0 20%;
+}
+
+.experience-bg3{
+    background-image: url('./Assets/ExperienceBg/first.png');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+.star::before{
+    content: url('./Assets//psedoElements/star.png');
+    margin-right: 8px;
+}
+
+.line::after{
+    content: url('./Assets/line/div.trsutpilot-header_line.png');
+    margin-left: 10px;
+
+}
+.line::before{
+    content: url('./Assets/line/div.trsutpilot-header_line.png');
+    margin-right: 10px;
+
+}
+.section-bg{
+    background-image: url('./Assets//sectionHeader.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+.section2-bg{
+    background-image: url('./Assets/vectors/vector1.png');
+    background-repeat: no-repeat;
+    background-position:  right;
+    background-size: contain;
+}
+
+.shopper-header-bg{
+    background-image: url('./Assets//shoppers/div.shopper-cards-wrapper.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.shopper-header-bg-1{
+    background-image: url('./Assets//shoppers//shopperbg.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.active{
+    background-color:  #ccc;
+}
+.active:hover{
+    background-color:  #ccc;
+}
