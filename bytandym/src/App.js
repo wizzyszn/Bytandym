@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Solutions from "./pages/Solutions";
@@ -10,7 +10,7 @@ import Shoppers from "./pages/Shoppers";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
-  
+
   useEffect(() => {
     function checkIfMobile() {
       setIsMobile(window.innerWidth < 1024); // Adjust the value according to your needs
@@ -22,8 +22,8 @@ function App() {
       checkIfMobile();
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -39,6 +39,9 @@ function App() {
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/brands" element={<Brands />} />
             <Route path="/shoppers" element={<Shoppers />} />
+
+            {/* Catch-all route for unmatched URLs */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
       )}
