@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Solutions from "./pages/Solutions";
@@ -31,7 +31,6 @@ function App() {
       {isMobile ? (
         <DesktopMode />
       ) : (
-        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
@@ -43,7 +42,6 @@ function App() {
             {/* Catch-all route for unmatched URLs */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-        </BrowserRouter>
       )}
     </div>
   );
