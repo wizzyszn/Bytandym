@@ -1,11 +1,23 @@
 import React from 'react'
 import Bytandym from '../Assets/image.png'
 import UsePageTitle from '../hooks/UsePageTitle'
+import {motion} from "framer-motion"
 export default function Login() {
   UsePageTitle('Login')
+  
   return (
     <div className=' bg-[#EEF5F4] h-svh flex justify-center items-center'>
-        <div className='bg-[#FFFFFF] h-[45%] w-[25%] rounded-2xl p-8 shadow-sm flex flex-col gap-3'>
+        <motion.div
+          initial = {{y : 75, opacity : 0}}
+          animate = {{y : 0, opacity : 1}}
+          transition = {{
+            ease: 'easeIn',
+            duration : 0.5,
+            type : 'spring',
+            stiffness : 260,
+            dampimg : 20
+          }}
+          className='bg-[#FFFFFF] h-[45%] w-[25%] rounded-2xl p-8 shadow-sm flex flex-col gap-3'>
             <div><img src={Bytandym} alt="img" onError={(e) => console.log('error', e)} /></div>
             <h1 className=' font-bold text-3xl'>Welcome to Tandym</h1>
             <form action="" className=' flex flex-col gap-3'>
@@ -21,7 +33,7 @@ export default function Login() {
                 <button type="submit" className=' p-3 bg-[#136D58] rounded-3xl text-white mt-4'> Log In</button>
                
             </form>
-        </div>
+        </motion.div>
     </div>
   )
 }
